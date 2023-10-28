@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsive FAQ Accordion </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="accordion">
+    <div class="image-box">
+      <img src="images/mainImg.png" alt="">
+    </div>
+    <div class="accordion-text">
+      <div class="title">FAQ</div>
+    <ul class="faq-text">
+      <li>
+        <div class="question-arrow">
+          <span class="question">What do you mean by HTML & CSS?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, doloribus.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">What do you mean by JavaScript?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">From where you learned HTML & CSS?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, necessitatibus.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">Which code editor do you use?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, labore.</p>
+        <span class="line"></span>
+      </li>
+      <li>
+        <div class="question-arrow">
+          <span class="question">Software you use for video editing?</span>
+          <i class="bx bxs-chevron-down arrow"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repudiandae!</p>
+        <span class="line"></span>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+
+  <script>
+    const list = document.querySelectorAll(".faq-text li");
+    
+    list.forEach((item, index) => {
+      let header = item.querySelector(".question-arrow");
+      header.addEventListener("click", ()=>{
+        item.classList.toggle("showAnswer");
+
+        let description = item.querySelector("p");
+        if(item.classList.contains("showAnswer")){
+          description.style.height = `${description.scrollHeight}px`;
+
+        }else{
+          description.style.height = "0px";
+        }
+        removeLi(index);
+      })
+    });
+
+    function removeLi(index1){
+      list.forEach((item2,index2) => {
+        if(index1 != index2){
+          item2.classList.remove("showAnswer");
+
+          let des = item2.querySelector("p");
+          des.style.height = "0px";
+
+        }
+      })
+    }
+  </script>
+
+</body>
+</html>

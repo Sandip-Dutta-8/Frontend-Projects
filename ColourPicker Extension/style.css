@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.container{
+    width: 350px;
+    background: white;
+}
+
+.container .pick-color{
+    padding: 30px 0;
+    background-color: rgb(255, 255, 240);
+    display: flex;
+    justify-content: center;
+}
+
+.container .pick-color .color-picker{
+    padding: 10px 40px;
+    background-color: rgba(9, 58, 219, 0.826);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-weight: 450;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+}
+.container .pick-color .color-picker:hover{
+    background: rgba(4, 40, 160, 0.826);
+}
+.headings{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 15px;
+    border-bottom: 2px dotted black;
+    font-family: 'Merriweather', serif;
+}
+
+.headings .title{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.headings .clear{
+    color: #052d94d3;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.headings .clear:hover{
+    color: #0414c1;
+}
+.all-colors{
+    margin: 10px 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.all-colors .color{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: calc(100%/3);
+}
+
+.all-colors .color .rect{
+    display: block;
+    height: 22px;
+    width: 22px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.all-colors .color .value{
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.picked-color.hide{
+    display: none;
+}

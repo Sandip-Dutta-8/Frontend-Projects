@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: salmon;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+
+}
+.container{
+    position: absolute;
+    width: 300px;
+    background-color: white;
+    
+}
+.container .menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.2rem;
+    align-items: center;
+}
+.menu .item{
+    padding: 5px 10px;
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+.menu .item:hover{
+    background-color: rgb(192, 192, 192);
+}
+.item .shares{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item.share{
+    position: relative;
+}
+.item.share:hover .share-menu{
+    visibility: visible;
+}
+.share-menu{
+    position: absolute;
+    right: -190px;
+    top: 10px;
+    list-style: none;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    visibility: hidden;
+    transition:all 0.3s ease;
+}
+
+.share-menu .share-item{
+    padding: 5px 10px;
+    font-size: 1rem;
+}
+.share-menu .share-item:hover{
+    background-color: rgb(202, 202, 202);
+    cursor: pointer;
+}

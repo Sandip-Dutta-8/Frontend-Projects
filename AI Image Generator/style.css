@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img-generator{
+    height: 45vh;
+    width: 100vw;
+    background-image: url('images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.img-generator::before{
+    content: "";
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.4;
+}
+.content{
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-generator .content h1{
+    color: white;
+    font-size: 3rem;
+}
+.content h3{
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-top: 15px;
+}
+.content .generate-form{
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding: 0px 10px 0px 20px;
+    margin: 25px;
+}
+.generate-form .input-text{
+    width: 70%;
+    height: 90%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: rgb(63, 63, 63);
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.generate-form .controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.generate-form #img-count{
+    border: none;
+    outline: none;
+}
+.generate-form .Generate-btn{
+    background-color: rgba(0, 0, 134, 0.792);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 30px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.images{
+    width: 100vw;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.images .img-card{
+    width: 300px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(224, 224, 224, 0.711);
+}
+
+.img-card img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all ease 0.4s;
+}
+.img-card img:hover{
+    scale: 1.1;
+}
+
+.img-card .download-btn img{
+    width: 20px;
+    height: 20px;
+}
+.img-card .download-btn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.851);
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: none;
+}
+.img-card:hover:not(.loading) .download-btn{
+    display: flex;
+}
+.images .img-card.loading img{
+    height: 80px;
+    width: 80px;
+}
+
+@media (max-width: 620px) and (min-width: 0px){
+    .content{
+        width: 90%;
+    }
+    .content .generate-form{
+        margin-top: 30px;
+        display: block;
+    }
+    .generate-form .input-text{
+        width: 100%;
+        border-radius: 30px;
+        margin-right: 0;
+    }
+    .generate-form .controls{
+        justify-content: flex-end;
+        margin-top: 12px;
+        gap: 10px;
+    }
+    .generate-form .controls #img-count{
+        background-color: transparent;
+        color: white;
+        font: 1rem;
+    }
+    .generate-form .controls #img-count option{
+        background-color: black;
+    }
+    .images .img-card{
+        width: 100%;
+        margin: 0 15px;
+    }
+    .img-card:not(.loading) .download-btn{
+        display: flex;
+    }
+}
+
+ @media (max-width: 960px) and (min-width: 620px){
+    .content{
+        width: 90%;
+    }
+    .img-card:not(.loading) .download-btn{
+        display: flex;
+    }
+} 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="img-generator">
+        <div class="content">
+            <h1>AI Image Generator</h1>
+            <h3>You can create images describing your thoughts</h3>
+            <form action="#" class="generate-form">
+                <input type="text" class="input-text" placeholder="Describe your thoughts here" required>
+                <div class="controls">
+                <select name="count" id="img-count" required>
+                    <option value="1">Image-1</option>
+                    <option value="2">Image-2</option>
+                    <option value="3">Image-3</option>
+                    <option value="4" selected>Image-4</option>
+                </select>
+                <button type="submit" class="Generate-btn">Generate</button>
+            </div>
+            </form>
+        </div>
+    </section>
+    
+    <section class="images">
+        <div class="img-card">
+            <img src="images/img-1.jpg" alt="Image-1">
+            <a href="#" class="download-btn">
+                <img src="images/download.svg" alt="download">
+            </a>
+        </div>
+        <div class="img-card">
+            <img src="images/img-2.jpg" alt="Image-2">
+            <a href="#" class="download-btn">
+                <img src="images/download.svg" alt="download">
+            </a>
+        </div>
+        <div class="img-card">
+            <img src="images/img-3.jpg" alt="Image-3">
+            <a href="#" class="download-btn">
+                <img src="images/download.svg" alt="download">
+            </a>
+        </div>
+        <div class="img-card">
+            <img src="images/img-4.jpg" alt="Image-4">
+            <a href="#" class="download-btn">
+                <img src="images/download.svg" alt="download">
+            </a>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

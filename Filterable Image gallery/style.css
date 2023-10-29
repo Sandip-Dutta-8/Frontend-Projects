@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100vw;
+    background-color: #e5f3fc;
+    padding: 50px;
+}
+.container{
+    width: 100%;
+}
+.container .buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.container .buttons button{
+    outline: none;
+    border: black solid 1px;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+button.active{
+    background-color: #4170f4;
+    color: white;
+}
+
+.container .cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.container .cards .card{
+    background-color: white;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 8px;
+    border: 1px solid black;
+    flex-grow: 1;
+}
+.card.hide{
+    display: none;
+}
+.card .image img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+}
+.card .title h5{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 5px;
+}

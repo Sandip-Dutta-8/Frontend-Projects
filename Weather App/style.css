@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 450px;
+    height: auto;
+    background: linear-gradient(135deg, #56e0af, #434a6c);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .search-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.card .search-box input{
+    width: 80%;
+    height: 60px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    padding: 0 20px;
+    font-size: 1rem;
+    
+}
+.card .search-box button{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .search-box button img{
+    width: 25px;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    display: none;
+}
+.weather img{
+    width: 200px;
+}
+.weather h2{
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.weather h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    padding: 0 20px 0 20px;
+}
+.details .humidity{
+    display: flex;
+    width: 50%;
+    display: flex;
+    color: #fff;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.details .wind-speed{
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    display: flex;
+    color: #fff;
+    gap: 10px;
+}
+.details .text{
+    display: flex;
+    flex-direction: column;
+}
+
+.error{
+    font-size: 2rem;
+    color: white;
+    margin-top: 30px;
+    font-weight: bold;
+    display: none;
+}

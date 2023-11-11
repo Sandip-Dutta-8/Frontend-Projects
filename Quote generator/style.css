@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(53, 153, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 500px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 0 15px black;
+}
+.title{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.content{
+    font-size: 1.1rem;
+    text-align: center;
+    word-spacing: 3px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+.writer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.quote-writer{
+    border-bottom: 1.5px solid rgb(7, 111, 163);
+    padding-bottom: 15px;
+}
+.new-quote{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.icons{
+    display: flex;
+    gap: 20px;
+}
+.icons span{
+    color: rgb(7, 111, 163);
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.icons span:hover{
+    color: white;
+    background-color: rgb(7, 111, 163);
+}
+.btn button{
+    background-color: rgb(7, 111, 163);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+button:hover{
+    background-color: rgb(2, 68, 101);
+    padding: 10px 25px;
+}
+.author{
+    margin-left: 8px;
+}
+.loading{
+    opacity: 0.6;
+}
